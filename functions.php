@@ -84,6 +84,8 @@ function cs_scripts() {
 	wp_enqueue_style( 'cs-style', get_stylesheet_uri(),array('cs-bootstrap-css') );
 
 	wp_enqueue_script( 'cs-bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array( 'jquery' ));
+	wp_enqueue_script( 'cs-modernizr', get_template_directory_uri() . '/js/cs-modernizr.js', array( 'jquery' ));
+	wp_enqueue_script( 'cs', get_template_directory_uri() . '/js/cs.js', array( 'jquery' ));
 	wp_enqueue_script( 'cs-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'cs-bootstrap-js'), '20120206', true );
 	wp_enqueue_script( 'cs-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -96,7 +98,7 @@ add_action( 'wp_enqueue_scripts', 'cs_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -123,5 +125,11 @@ require get_template_directory() . '/inc/customizer.php';
 * New versions of functions from Hale, added as includes
 */
 require get_template_directory() . '/inc/nav-walker.php';
+
+
+/** 
+* Bootstrap the comment form.
+*/
+require get_template_directory() . '/inc/bootstrap-forms.php';
 
 

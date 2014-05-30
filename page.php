@@ -11,7 +11,6 @@
  */
 
 get_header(); ?>
-<div class="container">
 	<div class="row">
 
 		<!-- 
@@ -72,5 +71,4 @@ get_header(); ?>
 			<?php //get_sidebar(); ?>
 		</div>
 	</div>
-</div>
 <?php get_footer(); ?>

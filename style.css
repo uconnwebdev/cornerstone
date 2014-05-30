@@ -1,27 +1,24 @@
 /*
 Theme Name: cornerstone
-Theme URI: http://underscores.me/
-Author: Andrew Bacon
+Theme URI: http://github.com/uconnwebdev/cornerstone
+Author: Andrew Bacon of the UConn Web Development Lab
 Author URI: http://andrewbacon.net
 Description: Parent theme for University of Connecticut
-Version: 1.0-wpcom
+Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cs
-Domain Path: /languages/
-Tags:
+*/
+/* 
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+	This theme is based on 
+	
+		Underscores
+		Bootstrap 3
 
- cornerstone is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-and Blueprint http://www.blueprintcss.org/
 */
 
+/* Underscores */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -46,7 +43,7 @@ and Blueprint http://www.blueprintcss.org/
 	12.2 - Galleries
 --------------------------------------------------------------*/
 
-/
+
 /*--------------------------------------------------------------
 7.0 Alignments
 --------------------------------------------------------------*/
@@ -217,3 +214,86 @@ object {
 	max-width: 11.11%;
 }
 .gallery-caption {}
+
+
+/* cornerstone */
+
+img {
+	height: auto; 
+	max-width: 100%; 
+	}
+
+
+/* Link Flag */
+
+.flag {
+	background-color:rgba(0,0,0, .1);
+	font-size: 80%;
+	padding: .1em .2em;
+	margin-left: .4em;
+	border:1px solid rgba(0,0,0, .2);
+	border-radius:.3em;
+	}
+.external {	
+	}
+	.external .glyphicon {
+		font-size:.8em;
+		margin-right:.4em;
+		opacity:.7;
+		}
+		.external:hover .glyphicon {
+			opacity:1;
+			}
+		
+		
+		
+.content-area {
+	background-color:#fff;
+	}
+	
+	
+/* comments form */
+.form-submit {
+    display: none;
+	}
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		width: 50%;
+		}
+		
+
+
+#masthead.header-image {
+	position:relative;
+	}
+	#header-image-wrap {
+		overflow:hidden;
+		max-height:250px;
+		}	
+		#header-image {
+			min-height:100px;
+			width:100%;
+			}
+	#masthead.header-image .site-branding {
+		position:absolute;top:30px;
+		left:30px;
+		}
+		
+		
+		
+#primary-nav.neverwrap > ul > li > a {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	text-align:center;
+	}
+#primary-nav.neverwrap > ul > li+li > a {
+	border-left:1px solid rgba(0,0,0, .2);	
+	font-size:.9em;
+}
+#primary-nav.neverwrap .nav {
+	width:100%;
+}
+.menu-item {
+}

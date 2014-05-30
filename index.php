@@ -12,7 +12,6 @@
  */
 
 get_header(); ?>
-<div class="container">
 	<div class="row">
 		<!-- 
 
@@ -77,5 +76,4 @@ get_header(); ?>
 			<?php dynamic_sidebar( apply_filters( 'ups_sidebar', 'default-sidebar-id' ) ); ?>
 		</div>
 	</div>
-</div>
 <?php get_footer(); ?>
