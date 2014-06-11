@@ -1,9 +1,11 @@
 <?php
-/**
- * @package cornerstone
+/*
+	
+	This file loads the content for the main blog/index view. 
+
  */
 ?>
-
+<h1>Content.php</h1>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
@@ -58,6 +60,6 @@
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'cs' ), __( '1 Comment', 'cs' ), __( '% Comments', 'cs' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'cs' ), '<span class="edit-link">', '</span>' ); ?>
+		
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+<h1>search.php</h1>
 <div class="container">
 	<div class="row">
 		

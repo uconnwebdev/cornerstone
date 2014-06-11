@@ -1,9 +1,7 @@
 <?php
-/**
- * @package cornerstone
- */
+// This is used when viewing a single post. 
 ?>
-
+<h1>content-single.php</h1>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -57,6 +55,6 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'cs' ), '<span class="edit-link">', '</span>' ); ?>
+		
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

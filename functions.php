@@ -133,3 +133,11 @@ require get_template_directory() . '/inc/nav-walker.php';
 require get_template_directory() . '/inc/bootstrap-forms.php';
 
 
+// Change what's hidden by default
+add_filter('default_hidden_meta_boxes', 'be_hidden_meta_boxes', 10, 2);
+function be_hidden_meta_boxes($hidden, $screen) {
+	if ( 'post' == $screen->base || 'page' == $screen->base )
+		$hidden = array('slugdiv', 'trackbacksdiv', 'postexcerpt', 'commentstatusdiv', 'commentsdiv', 'authordiv', 'revisionsdiv');
+		// removed 'postcustom',
+	return $hidden;
+}

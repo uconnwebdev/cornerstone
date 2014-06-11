@@ -4,9 +4,15 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package cornerstone
  */
-?><!DOCTYPE html>
+
+$secondary = get_option( 'parentSiteTitle','');
+$secondarylink = get_option( 'parentSiteLink','');
+//$nav1 = get_theme_mod( 'navoption1','textnav');
+//$nav2 = get_theme_mod( 'navoption2','with-drop');
+
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -32,6 +38,14 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>
 						" rel="home">
 						<?php bloginfo( 'name' ); ?></a>
+						<?php
+				            if(strlen($secondary) > 0 && strlen($secondarylink) > 0){
+								if(substr($secondarylink,0,4) != 'http'){
+									$secondarylink = 'http://'.$secondarylink;
+								}
+				                echo '<a href="'.$secondarylink.'">'.$secondary.'</a>';
+				            }
+				        ?>
 				</h1>
 				<h2 class="site-description">
 					<?php bloginfo( 'description' ); ?></h2>
@@ -41,9 +55,11 @@
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-nav">
 						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						<span class="menu-icon">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</span>
 						<span class="menu-label">Menu</span>
 					</button>
 					<a class="navbar-brand visible-xs" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>

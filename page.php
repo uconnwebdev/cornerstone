@@ -11,6 +11,12 @@
  */
 
 get_header(); ?>
+<h1>page.php</h1>
+	<?php 
+		// sidebar custom field check. 
+		$sidebar = get_post_meta( get_the_ID(), 'sidebar', true );
+
+	?>
 	<div class="row">
 
 		<!-- 
@@ -67,7 +73,17 @@ get_header(); ?>
 		-->
 
 		<div class="col-sm-3">
-			<?php dynamic_sidebar( apply_filters( 'ups_sidebar', 'default-sidebar-id' ) ); ?>
+			<?php 
+				$sidebar = get_post_meta( get_the_ID(), 'sidebar', true );
+				echo '<h1>'.$sidebar.'</h1>';
+				if ($sidebar == null){
+					echo '<h1>NULL</h1>';
+				}
+				if ( is_active_sidebar( $sidebar ) ) { 
+			?>
+					<?php dynamic_sidebar( $sidebar ); ?>
+			<?php }
+			//<?php dynamic_sidebar( apply_filters( 'ups_sidebar', 'default-sidebar-id' ) ); ?>
 			<?php //get_sidebar(); ?>
 		</div>
 	</div>

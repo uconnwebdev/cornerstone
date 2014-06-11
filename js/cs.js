@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
 		May 2014
 		
 	 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-	
+	/*
 	function calcNavWidth(){
 		var width = 0
 		$('#primary-nav > ul > li > a').each(function(){

@@ -17,71 +17,86 @@ Text Domain: cs
 		Bootstrap 3
 
 */
+
+
+
+
+
 /*--------------------------------------------------------------
 
 	CORNERSTONE
 
 --------------------------------------------------------------*/
+
+$contentBg: #fff;
+$contentPadding: 1em;
+
+
+
+
 img {
-  height: auto;
-  max-width: 100%;
-}
+	height: auto; 
+	max-width: 100%; 
+	}
+
 
 /* Link Flag */
+
 .flag {
-  background-color: rgba(0, 0, 0, 0.1);
-  font-size: 80%;
-  padding: .1em .2em;
-  margin-left: .4em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: .3em;
-}
+	background-color:rgba(0,0,0, .1);
+	font-size: 80%;
+	padding: .1em .2em;
+	margin-left: .4em;
+	border:1px solid rgba(0,0,0, .2);
+	border-radius:.3em;
+	}
+.external {	
+	}
+	.external .glyphicon {
+		font-size:.8em;
+		margin-right:.4em;
+		opacity:.7;
+		}
+		.external:hover .glyphicon {
+			opacity:1;
+			}
+		
+		
+		
 
-.external .glyphicon {
-  font-size: .8em;
-  margin-right: .4em;
-  opacity: .7;
-}
-
-.external:hover .glyphicon {
-  opacity: 1;
-}
-
+	
 /* comments form */
 .form-submit {
-  display: none;
-}
-
-.comment-form-author,
-.comment-form-email,
-.comment-form-url {
-  width: 50%;
-}
+    display: none;
+	}
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		width: 50%;
+		}
+		
 
 /*	Custom Header Image
---------------------------------------------------------------*/
+--------------------------------------------------------------*/	
 #masthead.header-image {
-  position: relative;
-}
-
-#header-image-wrap {
-  overflow: hidden;
-  max-height: 250px;
-}
-
-#header-image {
-  min-height: 100px;
-  width: 100%;
-}
-
-#masthead.header-image .site-branding {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
+	position:relative;
+	}
+	#header-image-wrap {
+		overflow:hidden;
+		max-height:250px;
+		}	
+		#header-image {
+			min-height:100px;
+			width:100%;
+			}
+	#masthead.header-image .site-branding {
+		position:absolute;top:30px;
+		left:30px;
+		}
+		
 
 /*	NAV
---------------------------------------------------------------*/
+--------------------------------------------------------------*/		
 /*
 #primary-nav.neverwrap .nav {
 	width:100%;
@@ -97,79 +112,105 @@ img {
 			font-size:.9em;
 			}
 	
-/**/
-.menu-icon,
+/**/	
+.menu-icon, 
 .menu-label {
-  display: inline-block;
-}
+	display: inline-block;
+	}
+	.menu-label {
+		position: relative;
+		top:-.15em;
+		margin-left: .2em;
+		}	
 
-.menu-label {
-  position: relative;
-  top: -.15em;
-  margin-left: .2em;
-}
+
 
 /*	PAGE
---------------------------------------------------------------*/
+--------------------------------------------------------------*/	
 .page {
-  background-color: white;
-  padding: 1em;
+	background-color: $contentBg;
+	padding: $contentPadding;
+}
+/*	POSTS
+--------------------------------------------------------------*/	
+
+.post {
+	background-color: $contentBg;
+	padding: $contentPadding;
 }
 
-/*	POSTS
---------------------------------------------------------------*/
-.post {
-  background-color: white;
-  padding: 1em;
-}
 
 /*	SINGLE
---------------------------------------------------------------*/
+--------------------------------------------------------------*/	
+
+
+
+
+
+
+
+
 .comments-area {
-  background-color: white;
-  padding: 1em;
+	background-color: $contentBg;
+	padding: $contentPadding;
 }
 
+
+
+
+
+// Bootstrap overrides. 
+
 code {
-  white-space: normal;
+	white-space:normal;
 }
+
+
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 7.0 Alignments
 --------------------------------------------------------------*/
 .alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em;
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
 }
-
 .alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em;
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
 }
 
-.aligncenter {
-  clear: both;
-  display: block;
-  margin: 0 auto;
-}
+
 
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+	margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets */
 .widget select {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 /* Search widget */
 .widget_search .search-submit {
-  display: none;
+	display: none;
 }
 
 /*--------------------------------------------------------------
@@ -178,29 +219,27 @@ code {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
-.hentry {
-  margin: 0 0 1.5em;
+.sticky {
 }
-
+.hentry {
+	margin: 0 0 1.5em;
+}
 .byline,
 .updated {
-  display: none;
+	display: none;
 }
-
 .single .byline,
 .group-blog .byline {
-  display: inline;
+	display: inline;
 }
-
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+	margin: 1.5em 0 0;
 }
-
 .page-links {
-  clear: both;
-  margin: 0 0 1.5em;
+	clear: both;
+	margin: 0 0 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -208,29 +247,29 @@ code {
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-  display: none;
+	display: none;
 }
 
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
 .comment-content a {
-  word-wrap: break-word;
+	word-wrap: break-word;
+}
+.bypostauthor {
 }
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none;
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
 }
-
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
-  display: block;
+	display: block;
 }
 
 /*--------------------------------------------------------------
@@ -239,82 +278,71 @@ code {
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
 }
-
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
 object {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 /*--------------------------------------------------------------
 12.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-  margin-bottom: 1.5em;
-  max-width: 100%;
+	margin-bottom: 1.5em;
+	max-width: 100%;
 }
-
 .wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin: 0 auto;
+	display: block;
+	margin: 0 auto;
 }
-
 .wp-caption-text {
-  text-align: center;
+	text-align: center;
 }
-
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
+	margin: 0.8075em 0;
 }
 
 /*--------------------------------------------------------------
 12.2 Galleries
 --------------------------------------------------------------*/
 .gallery {
-  margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
 }
-
 .gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
 }
-
 .gallery-columns-2 .gallery-item {
-  max-width: 50%;
+	max-width: 50%;
 }
-
 .gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
+	max-width: 33.33%;
 }
-
 .gallery-columns-4 .gallery-item {
-  max-width: 25%;
+	max-width: 25%;
 }
-
 .gallery-columns-5 .gallery-item {
-  max-width: 20%;
+	max-width: 20%;
 }
-
 .gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
+	max-width: 16.66%;
 }
-
 .gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
+	max-width: 14.28%;
 }
-
 .gallery-columns-8 .gallery-item {
-  max-width: 12.5%;
+	max-width: 12.5%;
 }
-
 .gallery-columns-9 .gallery-item {
-  max-width: 11.11%;
+	max-width: 11.11%;
 }
+.gallery-caption {}
+
